@@ -9,7 +9,7 @@ import os.path
 
 st.set_page_config(layout = 'wide')
 
-filename = 'https://github.com/Martijnadevries/randomgodpicker/blob/main/gods_owned.csv'
+filename = 'https://github.com/Martijnadevries/randomgodpicker/gods_owned.csv'
 file_exists = os.path.isfile(filename)
 
 if file_exists:
@@ -17,9 +17,9 @@ if file_exists:
 else:
     base_gods = ['Ares', 'Artemis', 'Bellona', 'Guan Yu', 'Kukulkan', 'Neith', 'Nemesis', 'Ra', 'Thor', 'Ymir']
     base_file = pd.Series(base_gods, index = None)
-    base_file.to_csv('https://github.com/Martijnadevries/randomgodpicker/blob/main/gods_owned.csv', index = False)
+    base_file.to_csv('https://github.com/Martijnadevries/randomgodpicker/gods_owned.csv', index = False)
 
-gods_owned = pd.read_csv('https://github.com/Martijnadevries/randomgodpicker/blob/main/gods_owned.csv').squeeze().to_list()
+gods_owned = pd.read_csv('https://github.com/Martijnadevries/randomgodpicker/gods_owned.csv').squeeze().to_list()
 
 def main():
     god_list = ['Arachne', 'Awilix', 'Bakasura', 'Bastet', 'Camazotz', 'Da Ji', 'Fenrir', 'Hun Batz', 'Kali', 'Loki', 'Mercury', 'Ne Zha', 'Pele', 'Ratatoskr', 'Ravana', 'Serqet', 'Set', 'Susano', 'Thanatos', 'Tsukuyomi', 'Artio', 'Athena', 'Bacchus', 'Cabrakan', 'Cerberus', 'Cthulhu', 'Fafnir', 'Ganesha', 'Geb', 'Jormungandr', 'Khepri', 'Kumbhakarna', 'Kuzenbo', 'Sobek', 'Sylvanus', 'Terra', 'Xing Tian', 'Yemoja', 'Ah Muzen Cab', 'Anhur', 'Apollo', 'Cernunnos', 'Chernobog', 'Chiron', 'Cupid', 'Danzaburou', 'Hachiman', 'Heimdallr', 'Hou Yi', 'Izanami', 'Jing Wei', 'Medusa', 'Rama', 'Skadi', 'Ullr', 'Xbalanque', 'Agni', 'Ah Puch', 'Anubis', 'Ao Kuang', 'Aphrodite', 'Baba Yaga', 'Baron Samedi', "Change", 'Chronos', 'Discordia', 'Eset', 'Freya', 'Hades', 'He Bo', 'Hel', 'Hera', 'Janus', 'Merlin', 'Nox', 'Nu Wa', 'Olorun', 'Persephone', 'Poseidon', 'Raijin', 'Scylla', 'Sol', 'The Morrigan', 'Thoth', 'Tiamat', 'Vulcan', 'Zeus', 'Zhong Kui', 'Achilles', 'Amaterasu', 'Chaac', 'Cu Chulainn', 'Erlang Shen', 'Gilgamesh', 'Hercules', 'Horus', 'King Arthur', 'Mulan', 'Nike', 'Odin', 'Osiris', 'Sun Wukong', 'Tyr', 'Vamana']
@@ -37,7 +37,7 @@ def main():
 
         gods_pool = pd.Series(data = gods_owned)
         gods_pool = gods_pool.sort_values(ignore_index = True)
-        gods_pool.to_csv('https://github.com/Martijnadevries/randomgodpicker/blob/main/gods_owned.csv', index = False)
+        gods_pool.to_csv('https://github.com/Martijnadevries/randomgodpicker/gods_owned.csv', index = False)
         
     elif navigation_menu == 'Random Generator':
         random_god_pick()
@@ -64,7 +64,7 @@ def random_god_pick():
     random_selected_god = gods_owned[random_number]
 
     column1, column2, column3 = st.beta_columns(3)
-    file_name = ('https://github.com/Martijnadevries/randomgodpicker/blob/main/' + random_selected_god + ".jpg")
+    file_name = ('https://github.com/Martijnadevries/randomgodpicker/' + random_selected_god + ".jpg")
     column3 = column2.image(Image.open(file_name), width = 350)
 
 def god_list_show():
@@ -134,27 +134,27 @@ def god_list_show():
         index_4 = index_4 + 1
 
     for god in gods_owned_ordered[0:index_1]:
-        file_name_owned = ('https://github.com/Martijnadevries/randomgodpicker/blob/main' + god + ".jpg")
+        file_name_owned = ('https://github.com/Martijnadevries/randomgodpicker/' + god + ".jpg")
         columns1.image(Image.open(file_name_owned), width = 115)
 
     for god in gods_owned_ordered[index_1: index_2]:
-        file_name_owned2 = ('https://github.com/Martijnadevries/randomgodpicker/blob/main' + god + ".jpg")
+        file_name_owned2 = ('https://github.com/Martijnadevries/randomgodpicker/' + god + ".jpg")
         columns2.image(Image.open(file_name_owned2), width = 115)
 
     for god in gods_owned_ordered[index_2: index_3]:
-        file_name_owned3 = ('https://github.com/Martijnadevries/randomgodpicker/blob/main' + god + ".jpg")
+        file_name_owned3 = ('https://github.com/Martijnadevries/randomgodpicker/' + god + ".jpg")
         columns3.image(Image.open(file_name_owned3), width = 115)
 
     for god in gods_owned_ordered[index_3: index_4]:
-        file_name_owned4 = ('https://github.com/Martijnadevries/randomgodpicker/blob/main' + god + ".jpg")
+        file_name_owned4 = ('https://github.com/Martijnadevries/randomgodpicker/' + god + ".jpg")
         columns4.image(Image.open(file_name_owned4), width = 115)
 
     for god in gods_owned_ordered[index_4: index_5]:
-        file_name_owned5 = ('https://github.com/Martijnadevries/randomgodpicker/blob/main' + god + ".jpg")
+        file_name_owned5 = ('https://github.com/Martijnadevries/randomgodpicker/' + god + ".jpg")
         columns5.image(Image.open(file_name_owned5), width = 115)
 
     for god in gods_owned_ordered[index_5: index_6]:
-        file_name_owned6 = ('https://github.com/Martijnadevries/randomgodpicker/blob/main' + god + ".jpg")
+        file_name_owned6 = ('https://github.com/Martijnadevries/randomgodpicker/' + god + ".jpg")
         columns6.image(Image.open(file_name_owned6), width = 115) 
 
 if __name__ == '__main__':
