@@ -4,12 +4,13 @@ import pandas as pd
 import random
 from PIL import Image
 import os.path
+import urllib.request
 
 #Latest update 3.0 | 10/05/2021
 
 st.set_page_config(layout = 'wide')
 
-filename = 'https://github.com/Martijnadevries/randomgodpicker/gods_owned.csv'
+filename = urllib.request.urlopen('https://github.com/Martijnadevries/randomgodpicker/gods_owned.csv')
 file_exists = os.path.isfile(filename)
 
 if file_exists:
