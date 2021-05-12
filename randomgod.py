@@ -17,7 +17,7 @@ if file_exists:
 else:
     base_gods = ['Ares', 'Artemis', 'Bellona', 'Guan Yu', 'Kukulkan', 'Neith', 'Nemesis', 'Ra', 'Thor', 'Ymir']
     base_file = pd.Series(base_gods, index = None)
-    base_file.to_csv('C:/Users/Public/gods_owned.csv', index = False)
+    base_file.to_csv('./gods_owned.csv', index = False)
 
 gods_owned = pd.read_csv('./gods_owned.csv').squeeze().to_list()
 
