@@ -9,7 +9,7 @@ import os.path
 
 st.set_page_config(layout = 'wide')
 
-filename = 'gods_owned.csv'
+filename = 'C:/Users/Public/gods_owned.csv'
 file_exists = os.path.isfile(filename)
 
 if file_exists:
@@ -17,9 +17,9 @@ if file_exists:
 else:
     base_gods = ['Ares', 'Artemis', 'Bellona', 'Guan Yu', 'Kukulkan', 'Neith', 'Nemesis', 'Ra', 'Thor', 'Ymir']
     base_file = pd.Series(base_gods, index = None)
-    base_file.to_csv('gods_owned.csv', index = False)
+    base_file.to_csv('C:/Users/Public/gods_owned.csv', index = False)
 
-gods_owned = pd.read_csv('gods_owned.csv').squeeze().to_list()
+gods_owned = pd.read_csv('C:/Users/Public/gods_owned.csv').squeeze().to_list()
 
 def main():
     god_list = ['Arachne', 'Awilix', 'Bakasura', 'Bastet', 'Camazotz', 'Da Ji', 'Fenrir', 'Hun Batz', 'Kali', 'Loki', 'Mercury', 'Ne Zha', 'Pele', 'Ratatoskr', 'Ravana', 'Serqet', 'Set', 'Susano', 'Thanatos', 'Tsukuyomi', 'Artio', 'Athena', 'Bacchus', 'Cabrakan', 'Cerberus', 'Cthulhu', 'Fafnir', 'Ganesha', 'Geb', 'Jormungandr', 'Khepri', 'Kumbhakarna', 'Kuzenbo', 'Sobek', 'Sylvanus', 'Terra', 'Xing Tian', 'Yemoja', 'Ah Muzen Cab', 'Anhur', 'Apollo', 'Cernunnos', 'Chernobog', 'Chiron', 'Cupid', 'Danzaburou', 'Hachiman', 'Heimdallr', 'Hou Yi', 'Izanami', 'Jing Wei', 'Medusa', 'Rama', 'Skadi', 'Ullr', 'Xbalanque', 'Agni', 'Ah Puch', 'Anubis', 'Ao Kuang', 'Aphrodite', 'Baba Yaga', 'Baron Samedi', "Change", 'Chronos', 'Discordia', 'Eset', 'Freya', 'Hades', 'He Bo', 'Hel', 'Hera', 'Janus', 'Merlin', 'Nox', 'Nu Wa', 'Olorun', 'Persephone', 'Poseidon', 'Raijin', 'Scylla', 'Sol', 'The Morrigan', 'Thoth', 'Tiamat', 'Vulcan', 'Zeus', 'Zhong Kui', 'Achilles', 'Amaterasu', 'Chaac', 'Cu Chulainn', 'Erlang Shen', 'Gilgamesh', 'Hercules', 'Horus', 'King Arthur', 'Mulan', 'Nike', 'Odin', 'Osiris', 'Sun Wukong', 'Tyr', 'Vamana']
@@ -37,7 +37,7 @@ def main():
 
         gods_pool = pd.Series(data = gods_owned)
         gods_pool = gods_pool.sort_values(ignore_index = True)
-        gods_pool.to_csv('gods_owned.csv', index = False)
+        gods_pool.to_csv('C:/Users/Public/gods_owned.csv', index = False)
         
     elif navigation_menu == 'Random Generator':
         random_god_pick()
