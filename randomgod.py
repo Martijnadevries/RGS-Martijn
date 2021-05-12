@@ -10,7 +10,7 @@ import urllib.request
 
 st.set_page_config(layout = 'wide')
 
-filename = urllib.request.urlopen('https://github.com/Martijnadevries/randomgodpicker/gods_owned.csv')
+filename = 'gods_owned.csv'
 file_exists = os.path.isfile(filename)
 
 if file_exists:
