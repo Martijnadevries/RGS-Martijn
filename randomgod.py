@@ -4,7 +4,6 @@ import pandas as pd
 import random
 from PIL import Image
 import os.path
-import urllib.request
 
 #Latest update 3.0 | 10/05/2021
 
